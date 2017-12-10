@@ -29,8 +29,8 @@ namespace Service
 
         public static void SetApplicationPath(string appPath, string rootPath)
         {
-            // -root 网站或webapi的物理路径，如 tinyfox -root d:\myapi\wwwroot。
-            //（不加该参数时，默认路径是tinyfox.exe所在文件夹内的site\wwwroot目录）
+            // -root 网站或webapi的物理路径，如 owindog -root d:\myapi\wwwroot。
+            //（不加该参数时，默认路径是owindog.exe所在文件夹内的site\wwwroot目录）
             AppPtah = (appPath);
             bool isWindows = SystemUtil.IsWindowOs();
             if (string.IsNullOrEmpty(rootPath))

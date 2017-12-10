@@ -25,14 +25,14 @@ namespace Nancy.Demo2
     {
 
         /**************************************************************
-         * TinyFox Owin Server 默认情况下
-         * 网站是放在 TinyFox 进程所在文件夹下的site/wwwroot中的
+         * owindog Owin Server 默认情况下
+         * 网站是放在 owindog 进程所在文件夹下的site/wwwroot中的
          * ----------------------------------------------------------
          * 如果你把 NancyFx 的 Views 页放在其它的地方，应该作相应修改
          *******************************************************************/
 
         /// <summary>
-        /// 网站根文件夹物理路径(for tinyfox)
+        /// 网站根文件夹物理路径(for owindog)
         /// </summary>
         static readonly string _RootPath = AppDomain.CurrentDomain.GetData(".appPath").ToString();
 

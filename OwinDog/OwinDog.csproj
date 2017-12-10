@@ -115,6 +115,9 @@
     <Compile Include="OwinEngine\OwinContext.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\README.md">
+      <Link>README.md</Link>
+    </None>
     <None Include="runtime\native\libuv\lin\x32\libuv.so.1" />
     <None Include="runtime\native\libuv\lin\x64\libuv.so.1" />
     <None Include="runtime\native\libuv\oth\libuv.dylib" />

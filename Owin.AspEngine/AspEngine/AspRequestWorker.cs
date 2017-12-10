@@ -203,7 +203,7 @@
                     return "on";
 
                 case "SERVER_SOFTWARE":
-                    return "TinyFox";
+                    return "owindog";
             }
             if (this._reqData.RequestHttpHeader == null)
             {

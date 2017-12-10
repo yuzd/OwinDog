@@ -25,7 +25,7 @@ namespace WebSocket.Demo
 {
 
     /// <summary>
-    /// Jexus/Tinyfox For OWIN 接口类
+    /// owin/owindog For OWIN 接口类
     /// </summary>
     public class Adapter
     {
@@ -130,7 +130,7 @@ namespace WebSocket.Demo
             var responseStream = env["owin.ResponseBody"] as Stream;
 
             // 你准备发送的数据
-            const string outString = "<html><head><title>Jexus Owin Server</title></head><body>Jexus Owin Server!<br /><h2>Jexus Owin Server，放飞您灵感的翅膀...</h2>\r\n</body></html>";
+            const string outString = "<html><head><title>Owin Server</title></head><body>Owin Server!<br /><h2>Owin Server，放飞您灵感的翅膀...</h2>\r\n</body></html>";
             var outBytes = Encoding.UTF8.GetBytes(outString);
 
             // 从参数字典中获取Response HTTP头的字典对象

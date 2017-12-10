@@ -23,7 +23,7 @@ namespace Nancy.Demo2
 {
 
     /// <summary>
-    /// Jexus/TinyFox OWIN适配器
+    /// owin/owindog OWIN适配器
     /// </summary>
     class Adapter
     {
@@ -68,7 +68,7 @@ namespace Nancy.Demo2
 
             var capabilities = properties.ContainsKey("server.Capabilities") ? properties["server.Capabilities"] as IDictionary<string, object> : new Dictionary<string, object>();
             properties["server.Capabilities"] = capabilities;
-            capabilities["server.Name"] = "TinyFox";
+            capabilities["server.Name"] = "owindog";
             //capabilities["websocket.Version"] = "1.0";
             //......
 
@@ -95,7 +95,7 @@ namespace Nancy.Demo2
 
 
         /// <summary>
-        /// *** Jexus/TinyFox所需要的关键函数 ***
+        /// *** owin/owindog所需要的关键函数 ***
         /// </summary>
         /// <param name="env">新请求的环境字典，具体内容参见OWIN标准</param>
         /// <returns>返回一个正在运行或已经完成的任务</returns>
