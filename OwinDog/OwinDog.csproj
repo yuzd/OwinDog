@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{38FD2383-56A2-408D-8CBF-1E175F8D6488}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OwinDog</RootNamespace>
+    <AssemblyName>OwinDog</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Service\ActionQueue.cs" />
+    <Compile Include="Util\AssemblyUtils.cs" />
+    <Compile Include="Service\ApplicationInfo.cs" />
+    <Compile Include="Util\ByteUtil.cs" />
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Service\CustomeAsyncResult.cs" />
+    <Compile Include="OwinEngine\OwinAdapterManage.cs" />
+    <Compile Include="OwinEngine\OwinRequestStream.cs" />
+    <Compile Include="OwinEngine\ISocket.cs" />
+    <Compile Include="Service\ActionStoreManage.cs" />
+    <Compile Include="Model\UvPipeHandle.cs" />
+    <Compile Include="Service\RequestData.cs" />
+    <Compile Include="Util\UrlDeCode.cs" />
+    <Compile Include="Service\RequestCheck.cs" />
+    <Compile Include="Service\SimpleThreadPool.cs" />
+    <Compile Include="Service\HttpWorker.cs" />
+    <Compile Include="Service\ResultFactory.cs" />
+    <Compile Include="Service\HttpMimeTypeManage.cs" />
+    <Compile Include="Service\UvLoopThread.cs" />
+    <Compile Include="Model\HandleBase.cs" />
+    <Compile Include="Model\UvPipeStream.cs" />
+    <Compile Include="Model\UvStreamHandle.cs" />
+    <Compile Include="OwinEngine\OwinManager.cs" />
+    <Compile Include="Util\HttpCodeUtil.cs" />
+    <Compile Include="OwinEngine\OwinResponseStream.cs" />
+    <Compile Include="OwinEngine\OwinStream.cs" />
+    <Compile Include="Service\WriteParam.cs" />
+    <Compile Include="Service\CacheManager.cs" />
+    <Compile Include="OwinEngine\OwinHttpWorkerManage.cs" />
+    <Compile Include="Service\RequestDataFactory.cs" />
+    <Compile Include="OwinEngine\OwinHttpWorker.cs" />
+    <Compile Include="OwinEngine\OwinTask.cs" />
+    <Compile Include="Service\Listener.cs" />
+    <Compile Include="OwinEngine\OwinSocket.cs" />
+    <Compile Include="Util\SystemUtil.cs" />
+    <Compile Include="Model\ListenHandle.cs" />
+    <Compile Include="Model\AsyncHandle.cs" />
+    <Compile Include="Model\LoopHandle.cs" />
+    <Compile Include="Util\WebSocketReciveDataParse.cs" />
+    <Compile Include="Model\ShutdownHandle.cs" />
+    <Compile Include="OwinEngine\OwinAdapter.cs" />
+    <Compile Include="OwinEngine\OwinWebSocketServer.cs" />
+    <Compile Include="ProgMain.cs" />
+    <Compile Include="Model\WriteHandle.cs" />
+    <Compile Include="Model\LibUv.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OwinEngine\HeaderDictionary.cs" />
+    <Compile Include="OwinEngine\OwinContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="runtime\native\libuv\lin\x32\libuv.so.1" />
+    <None Include="runtime\native\libuv\lin\x64\libuv.so.1" />
+    <None Include="runtime\native\libuv\oth\libuv.dylib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="runtime\native\libuv\win\x32\libuv.dll" />
+    <Content Include="runtime\native\libuv\win\x64\libuv.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

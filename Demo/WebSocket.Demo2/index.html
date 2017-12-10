@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>WebSocket Test</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+    <script type="text/javascript">
+
+        var ws = new WebSocket("ws://127.0.0.1:8088/socket");
+
+        ws.onopen = function () {
+                ws.send(":已与WebSocket服务器连接，请输入内容.....");
+        };
+
+        ws.onclose = function () {
+            var d = document.getElementById("msgTxts");
+            d.innerHTML = d.innerHTML + '<br />===== 与服务器的连接已经关闭 ======';
+        };
+
+        ws.onerror = function (e) {
+            var d = document.getElementById("msgTxts");
+            d.innerHTML = '<span style="color:red">*** 连接出错 ***</span>';
+        };
+
+        ws.onmessage = function (msg) {
+            var txt = msg.data;
+            var d = document.getElementById("msgTxts");
+            d.innerHTML = '服务器回复：' + txt;
+            document.getElementById("Text1").focus();
+        };
+
+
+        function mySend() {
+            var txt = document.getElementById("Text1").value
+            if (txt == "") return;
+            ws.send(txt);
+            document.getElementById("Text1").value = '';
+        }
+
+
+    </script>
+
+
+
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div style="text-align:center;color:red"><br><br>你输入什么，服务器就回复什么，试试！！</div>
+
+    <div class="auto-style1">
+        <form method="post" onsubmit="mySend(); return false;">
+            <input id="Text1" name="Text1" style="width: 495px; height: 32px" type="text" /><br /><br />
+            <input name="Submit1" type="submit" value=" 发送 " /><br />
+        </form>
+    </div>
+    <div id="msgTxts" style="margin-top:24px; font-size:18px;color:green;text-align:center">
+
+    </div>
+
+</body>
+
+</html>
