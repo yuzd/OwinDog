@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{38FD2383-56A2-408D-8CBF-1E175F8D6488}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OwinDog</RootNamespace>
     <AssemblyName>OwinDog</AssemblyName>
@@ -118,13 +118,6 @@
     <None Include="..\README.md">
       <Link>README.md</Link>
     </None>
-    <None Include="runtime\native\libuv\lin\x32\libuv.so.1" />
-    <None Include="runtime\native\libuv\lin\x64\libuv.so.1" />
-    <None Include="runtime\native\libuv\oth\libuv.dylib" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="runtime\native\libuv\win\x32\libuv.dll" />
-    <Content Include="runtime\native\libuv\win\x64\libuv.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

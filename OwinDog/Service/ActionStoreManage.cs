@@ -10,7 +10,7 @@ using System.Timers;
 namespace Service
 {
    
-    internal static class ActionStoreManage
+    public static class ActionStoreManage
     {
         private static readonly ActionStore _actionStore = new ActionStore();
 
