@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin.WebSocket", "Owin.WebS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dog", "Dog\Dog.csproj", "{3B51C35F-EF88-493A-8183-4CFECA20F263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspTest", "Demo\AspTest\AspTest.csproj", "{83C619A2-4AE4-4029-945B-657F7159396E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,18 @@ Global
 		{3B51C35F-EF88-493A-8183-4CFECA20F263}.Release|x64.Build.0 = Release|Any CPU
 		{3B51C35F-EF88-493A-8183-4CFECA20F263}.Release|x86.ActiveCfg = Release|Any CPU
 		{3B51C35F-EF88-493A-8183-4CFECA20F263}.Release|x86.Build.0 = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|x64.Build.0 = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Debug|x86.Build.0 = Debug|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|x64.ActiveCfg = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|x64.Build.0 = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|x86.ActiveCfg = Release|Any CPU
+		{83C619A2-4AE4-4029-945B-657F7159396E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,5 +120,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DA9B5E13-8607-4E44-8350-74A011D5D07A} = {B9585D93-1243-499B-8501-CB47DEFFC15A}
 		{9DA5F38D-839C-4F81-A7D5-A397AAF14F23} = {B9585D93-1243-499B-8501-CB47DEFFC15A}
+		{83C619A2-4AE4-4029-945B-657F7159396E} = {B9585D93-1243-499B-8501-CB47DEFFC15A}
 	EndGlobalSection
 EndGlobal
